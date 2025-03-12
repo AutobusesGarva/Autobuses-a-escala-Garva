@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="Registrar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Tu autobús a escala, hecho realidad!</title>
+</head>
+<body>
+  
+<header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html" class="btn btn-blue">Nosotros</a></li>
+                <li><a href="Crear-pedido.html" class="btn btn-blue">Crear pedido</a></li>
+                <li><a href="Catalogo.html" class="btn btn-blue">Catálogo</a></li>
+                <li><a href="Logout.php" class="btn btn-blue">Salir</a></li>
+                <li><a href="Registrar.html" class="btn-register">Registrar</a></li>
+            </ul>
+        </nav>
+</header>
+
+<main class="registro-container">
+        <div class="image-container">
+            <img src="FondoRegistro.png" alt="Bus">
+        </div>
+
+        <div class="form-container">
+            <h2>Crear una cuenta</h2>
+            <form action="Registro.php" method="post">
+                <label for="usuario">Nombre</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Nombre">
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Apellidos">
+
+                <label for="correo">Correo</label>
+                <input type="text" id="correo" name="correo" required placeholder="Correo">
+
+                <label for="número">Número</label>
+                <input type="int" id="número" name="número" required placeholder="Número">
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+
+                <button type="submit" value="Agregar">Registrar</button>
+            </form>
+        </div>
+</main>
+</body>
+
+<footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>¡Escríbenos!</h3>
+          </div>
+          <div class="footer-section">
+            <a href="#" class="contacto-button">Contacto</a>
+            <a href="#" class="crear-pedido-button">Crear pedido</a>
+          </div>
+          <div class="footer-section">
+            <h3>Contactanos</h3>
+            <p>¿Tienes alguna pregunta o necesitas ayuda para diseñar tu autobús a escala?</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/busesGarva"><img src="facebook.svg" alt="Facebook"></a>
+              <a href="https://www.instagram.com/autobuses_garva?igsh=cmcxa2QyaDNmYTNy"><img src="instagram.svg" alt="Instagram"></a>
+              <a href="https://wa.me/5573857568"><img src="whatsapp.svg" alt="WhatsApp"></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <p>Toluca, México</p>
+            <p>55 7385 7568</p>
+            <p><a href="mailto:garvapublicidad@gmail.com">garvapublicidad@gmail.com</a></p>
+          </div>
+        </div>
+</footer>
+
+</html>

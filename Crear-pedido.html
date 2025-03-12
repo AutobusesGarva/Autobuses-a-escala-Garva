@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pedido</title>
+    <link rel="stylesheet" href="CrearCSS.css">
+    <script src="autocompletar.js"></script>
+</head>
+<body>
+    
+<header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html" class="btn btn-blue">Nosotros</a></li>
+                <li><a href="Crear-pedido.html" class="btn btn-blue">Crear pedido</a></li>
+                <li><a href="Catalogo.html" class="btn btn-blue">Catálogo</a></li>
+                
+               
+            </ul>
+        </nav>
+</header>
+
+<section class="formulario-pedido-fondo">
+    <div class="formulario-contenido">
+        <div class="formulario-izquierda">
+            <h2>¡Solicita tu autobús a escala personalizado!</h2>
+        </div>
+        <form action="pedido.php" method="post">
+            <div class="formulario-derecha">
+                <div class="logo-formulario">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="datos-contacto">
+                    <h3>DATOS DE CONTACTO:</h3> 
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+                <div class="detalles-pedido">
+                    <h3>DETALLES DEL PEDIDO</h3>
+                    <div class="campo">
+                        <label for="modelo">Modelo base</label>
+                        <input type="text" id="modelo" name="modelo">
+                    </div>
+                    <div class="campo">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color">
+                    </div>
+                    <div class="campo">
+                        <label for="detalles">Detalles adicionales:</label>
+                        <textarea id="detalles" name="detalles"></textarea>
+                    </div>
+                </div>
+                <button type="submit">ENVIAR</button>
+                <p class="terminos">Acepto nuestros términos y condiciones.</p>
+            </div>
+        </form>
+    </div>
+</section>
+<script>
+    // Obtener parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const ticketId = urlParams.get('ticket');
+    const error = urlParams.get('error');
+
+    if (ticketId) {
+        alert('Pedido registrado con éxito. Su número de ticket es: ' + ticketId);
+    } else if (error) {
+        alert('Error al registrar el pedido: ' + decodeURIComponent(error));
+    }
+</script>
+<br>
+
+<section class="seccion-principal">
+    <div class="contenido-principal">
+        <div class="texto-principal">
+            <h2>¡Consigue tu autobús a escala personalizado en 4 sencillos pasos!</h2>
+            <p>¡Consigue un autobús a escala de alta calidad, hecho a mano con dedicación y detalle! Sigue estos 4 sencillos pasos y obtén una pieza única que te encantará.</p>
+            <div class="botones-principal">
+                <button class="boton-inicio"> <a href="index.html">Inicio</button></a>
+                <button class="boton-catalogo"> <a href="Catalogo.html">Catalogo</button></a>
+            </div>
+        </div>
+        <div class="imagen-principal">
+            <img src="4pasos.png" alt="Imagen de autobús a escala">
+        </div>
+    </div>
+</section>
+
+<section class="paso-1">
+    <div class="contenido-paso-1">
+        <div class="texto-paso-1">
+            <h2>Paso 1: ¡Contáctanos!</h2>
+            <p>¡Completa nuestro formulario con todos los detalles. ¡Te contactaremos en un máximo de 1 día hábil para iniciar el proceso!</p>
+            <button class="boton-cotizacion">Solicita tu cotización</button>
+        </div>
+        <div class="imagen-paso-1">
+            <img src="contactanos.png" alt="Descripción de la imagen">
+        </div>
+    </div>
+</section>
+
+<section class="pasos-personalizacion">
+    <div class="paso">
+        <div class="paso-imagen">
+            <img src="paso2.png" alt="Imagen del paso 2">
+        </div>
+        <div class="paso-contenido">
+            <h3>Paso 2: ¡Diseñemos tu autobús y obtén tu cotización!</h3>
+            <p>¡Nos pondremos en contacto contigo para conocer tu visión y ofrecerte un presupuesto detallado! Una vez que estés de acuerdo y realices el pago inicial, ¡comenzaremos a crear tu autobús!</p>
+        </div>
+    </div>
+    <div class="paso">
+        <div class="paso-imagen">
+            <img src="paso3.png" alt="Imagen del paso 3">
+        </div>
+        <div class="paso-contenido">
+            <h3>Paso 3: ¡Tu autobús listo!</h3>
+            <p>¡Después de aproximadamente 8 semanas, tu autobús estará listo! Te notificaremos para coordinar el envío y el pago restante.</p>
+        </div>
+    </div>
+    <div class="paso">
+        <div class="paso-imagen">
+            <img src="paso4.png" alt="Imagen del paso 4">
+        </div>
+        <div class="paso-contenido">
+            <h3>Paso 4: ¡Recibe tu autobús!</h3>
+            <p>¡Enviaremos tu autobús a la dirección que nos proporciones y te daremos el número de guía para que puedas rastrear el envío! ¡Estaremos pendientes hasta que lo recibas!</p>
+        </div>
+    </div>
+</section>
+
+<section class="envio-autobus">
+    <div class="contenido-envio">
+        <div class="texto-envio">
+            <p>Enviaremos tu autobús a la dirección que nos proporciones, a través de FedEx (para México) o UPS (para USA). Te daremos el número de guía para que puedas rastrear el envío y estaremos pendientes hasta que lo recibas. ¡Tu réplica estará lista en aproximadamente 8 semanas!</p>
+        </div>
+        <div class="imagen-envio">
+            <img src="envios.png" alt="Imagen de envío de autobús">
+        </div>
+    </div>
+</section>
+
+<footer class="contacto-seccion">
+    <div class="contacto-contenido">
+        <div class="contacto-izquierda">
+            <h2>Contáctanos</h2>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/busesGarva" class="red-social facebook"></a>
+                <a href="https://www.instagram.com/autobuses_garva?igsh=cmcxa2QyaDNmYTNy" class="red-social whatsapp"></a>
+                <a href="https://wa.me/5573857568" class="red-social instagram"></a>
+            </div>
+        </div>
+        <div class="contacto-centro">
+            <p>¿Tienes alguna pregunta o necesitas ayuda para diseñar tu autobús a escala?</p>
+        </div>
+        <div class="contacto-derecha">
+            <p>Toluca, México</p>
+            <p>55 7385-7568</p>
+            <p>garvepublicidad@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
