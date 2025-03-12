@@ -1,0 +1,513 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que el menú se ajuste en pantallas pequeñas */
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos de la lista se ajusten */
+    justify-content: center; /* Centra la lista en pantallas pequeñas */
+}
+
+nav li {
+    margin: 5px; /* Ajusta el margen entre elementos de la lista */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-blue {
+    background-color: #1a237e;
+}
+
+.btn-register {
+    background-color: #dc143c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Formulario y fondo */
+.formulario-pedido-fondo {
+    background-image: url('creapedido.png');
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px; /* Agrega padding para que el contenido no toque los bordes */
+}
+
+.formulario-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que el formulario se ajuste en pantallas pequeñas */
+}
+
+.formulario-izquierda {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 400px; /* Establece un ancho máximo */
+    background-color: #dc143c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Agrega margen inferior */
+    text-align: center; /* Centra el contenido */
+}
+
+.formulario-izquierda h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+.formulario-derecha {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 580px; /* Establece un ancho máximo */
+    height: auto; /* La altura se ajusta automáticamente */
+    flex-shrink: 0;
+    background-color: rgba(26, 35, 126, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centra el formulario */
+}
+
+/* Media Queries para ajustar estilos en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-izquierda {
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+}
+/*primera parte*/
+
+.logo-formulario {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-formulario img {
+    width: 150px;
+    height: auto;
+}
+
+.datos-contacto h3,
+.detalles-pedido h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.campo textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #dc143c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.terminos {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* 4 pasos */
+.seccion-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.contenido-principal {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+/*segunda parte*/
+
+.texto-principal {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.texto-principal h2 {
+    font-size: 2em; /* Ajustado el tamaño del título */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.texto-principal p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.botones-principal button {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin: 5px; /* Ajustado el margen para que se apilen en pantallas pequeñas */
+    cursor: pointer;
+}
+
+.boton-inicio {
+    background-color: #dc143c;
+    color: white;
+}
+
+.boton-catalogo {
+    background-color: #1a237e;
+    color: white;
+}
+
+.imagen-principal {
+    flex: 1;
+    text-align: center; /* Centra la imagen en pantallas pequeñas */
+}
+
+.imagen-principal img {
+    max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cotizacion paso 1 */
+.paso-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: left;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.contenido-paso-1 {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.texto-paso-1 {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 600px; /* Establece un ancho máximo */
+    padding-right: 0; /* Elimina el padding derecho */
+}
+
+.texto-paso-1 h2 {
+    font-size: 2em; /* Ajustado el tamaño del título */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.texto-paso-1 p {
+    font-size: 1em; /* Ajustado el tamaño del párrafo */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center; /* Centra el párrafo */
+}
+
+.boton-cotizacion {
+    background-color: #1a237e;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ocupa todo el ancho disponible */
+    margin: 20px auto; /* Centra el botón */
+}
+
+.boton-cotizacion:hover {
+    background-color: #151c6a;
+}
+/*tercera parte*/
+
+.imagen-paso-1 {
+    flex: 1;
+    text-align: center; /* Centra la imagen */
+}
+
+.imagen-paso-1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* paso 2,3,4 */
+.pasos-personalizacion {
+    display: flex;
+    justify-content: center; /* Centra los pasos */
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Permite que los pasos se ajusten */
+}
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 350px; /* Establece un ancho máximo */
+    text-align: center;
+    margin: 10px; /* Agrega margen entre los pasos */
+}
+
+.paso-contenido {
+    padding: 20px;
+}
+
+.paso h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.paso p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.paso-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Envios */
+.envio-autobus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.contenido-envio {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.texto-envio {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 600px; /* Establece un ancho máximo */
+    padding-right: 0; /* Elimina el padding derecho */
+    margin-bottom: 20px; /* Agrega margen inferior */
+}
+
+.texto-envio p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 2em; /* Ajustado el tamaño de la fuente */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2; /* Ajustado el espaciado entre líneas */
+    text-align: center; /* Centra el texto */
+}
+
+.imagen-envio {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 600px; /* Establece un ancho máximo */
+    text-align: center; /* Centra la imagen */
+}
+
+.imagen-envio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+.contacto-seccion {
+    background-color: #dc143c;
+    color: white;
+    padding: 40px;
+}
+
+.contacto-contenido {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-izquierda,
+.contacto-centro,
+.contacto-derecha {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    max-width: 300px; /* Establece un ancho máximo */
+    margin-bottom: 20px; /* Agrega margen inferior */
+    text-align: center; /* Centra el contenido */
+}
+
+.contacto-izquierda h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px; /* Ajusta el margen entre los iconos */
+    background-size: cover;
+}
+
+.red-social.facebook {
+    background-image: url('facebook.svg');
+}
+
+.red-social.whatsapp {
+    background-image: url('whatsapp.svg');
+}
+
+.red-social.instagram {
+    background-image: url('instagram.svg');
+}
+
+.contacto-centro p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.contacto-derecha p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(224, 224, 224, 0.7);
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+#searchInput {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 5px 0; /* Ajusta el margen para que se apile en pantallas pequeñas */
+    width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    max-width: 400px; /* Establece un ancho máximo */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    font-size: 1em;
+    font-family: sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    max-width: 200px; /* Establece un ancho máximo */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
